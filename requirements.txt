@@ -1,0 +1,5 @@
+Flask
+Flask-RESTful
+pandas
+scikit-learn==1.0
+uwsgi
