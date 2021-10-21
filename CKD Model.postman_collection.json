@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "af3f1046-ab6b-4fa9-921c-f789c4ad321d",
+		"name": "CKD Model",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LogisticModel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\t\"age\": [58,48],\r\n\t\"bp\": [80,70], \r\n\t\"sg\": [1.005,1.005], \r\n\t\"al\": [0,4], \r\n\t\"su\": [0,0], \r\n\t\"rbc\": [\"normal\",\"normal\"], \r\n\t\"pc\": [\"normal\",\"abnormal\"], \r\n\t\"pcc\": [\"notpresent\",\"present\"], \r\n\t\"ba\": [\"notpresent\",\"notpresent\"], \r\n\t\"bgr\": [131,117], \r\n\t\"bu\": [18,56],\r\n    \"sc\": [1.1, 3.8],\r\n    \"sod\": [141,111],\r\n    \"pot\": [3.5, 2.5],\r\n    \"hemo\": [15.8,11.2],\r\n    \"pcv\": [53, 32],\r\n    \"wbcc\": [6800, 6700],\r\n    \"rbcc\": [5.9, 3.9],\r\n    \"htn\": [\"no\",\"yes\"],\r\n    \"dm\": [\"no\",\"no\"],\r\n    \"cad\": [\"no\",\"no\"],\r\n    \"appet\": [\"good\",\"poor\"],\r\n    \"pe\": [\"no\",\"yes\"],\r\n    \"ane\": [\"no\",\"yes\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predictlr",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predictlr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVM Model",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\t\"age\": [40,48],\r\n\t\"bp\": [80,70], \r\n\t\"sg\": [1.005,1.005], \r\n\t\"al\": [0,4], \r\n\t\"su\": [0,0], \r\n\t\"rbc\": [\"normal\",\"normal\"], \r\n\t\"pc\": [\"normal\",\"abnormal\"], \r\n\t\"pcc\": [\"notpresent\",\"present\"], \r\n\t\"ba\": [\"notpresent\",\"notpresent\"], \r\n\t\"bgr\": [131,117], \r\n\t\"bu\": [18,56],\r\n    \"sc\": [1.1, 3.8],\r\n    \"sod\": [141,111],\r\n    \"pot\": [3.5, 2.5],\r\n    \"hemo\": [15.8,11.2],\r\n    \"pcv\": [53, 32],\r\n    \"wbcc\": [6800, 6700],\r\n    \"rbcc\": [5.9, 3.9],\r\n    \"htn\": [\"no\",\"yes\"],\r\n    \"dm\": [\"no\",\"no\"],\r\n    \"cad\": [\"no\",\"no\"],\r\n    \"appet\": [\"good\",\"poor\"],\r\n    \"pe\": [\"no\",\"yes\"],\r\n    \"ane\": [\"no\",\"yes\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predictsvm",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predictsvm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVM Model (Heroku)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\t\"age\": [40,48],\r\n\t\"bp\": [80,70], \r\n\t\"sg\": [1.005,1.005], \r\n\t\"al\": [0,4], \r\n\t\"su\": [0,0], \r\n\t\"rbc\": [\"normal\",\"normal\"], \r\n\t\"pc\": [\"normal\",\"abnormal\"], \r\n\t\"pcc\": [\"notpresent\",\"present\"], \r\n\t\"ba\": [\"notpresent\",\"notpresent\"], \r\n\t\"bgr\": [131,117], \r\n\t\"bu\": [18,56],\r\n    \"sc\": [1.1, 3.8],\r\n    \"sod\": [141,111],\r\n    \"pot\": [3.5, 2.5],\r\n    \"hemo\": [15.8,11.2],\r\n    \"pcv\": [53, 32],\r\n    \"wbcc\": [6800, 6700],\r\n    \"rbcc\": [5.9, 3.9],\r\n    \"htn\": [\"no\",\"yes\"],\r\n    \"dm\": [\"no\",\"no\"],\r\n    \"cad\": [\"no\",\"no\"],\r\n    \"appet\": [\"good\",\"poor\"],\r\n    \"pe\": [\"no\",\"yes\"],\r\n    \"ane\": [\"no\",\"yes\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ckdmodel.herokuapp.com/predictsvm",
+					"protocol": "https",
+					"host": [
+						"ckdmodel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"predictsvm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LogisticModel (Heroku)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\t\"age\": [58,48],\r\n\t\"bp\": [80,70], \r\n\t\"sg\": [1.025,1.005], \r\n\t\"al\": [0,4], \r\n\t\"su\": [0,0], \r\n\t\"rbc\": [\"normal\",\"normal\"], \r\n\t\"pc\": [\"normal\",\"abnormal\"], \r\n\t\"pcc\": [\"notpresent\",\"present\"], \r\n\t\"ba\": [\"notpresent\",\"notpresent\"], \r\n\t\"bgr\": [131,117], \r\n\t\"bu\": [18,56],\r\n    \"sc\": [1.1, 3.8],\r\n    \"sod\": [141,111],\r\n    \"pot\": [3.5, 2.5],\r\n    \"hemo\": [15.8,11.2],\r\n    \"pcv\": [53, 32],\r\n    \"wbcc\": [6800, 6700],\r\n    \"rbcc\": [5.9, 3.9],\r\n    \"htn\": [\"no\",\"yes\"],\r\n    \"dm\": [\"no\",\"no\"],\r\n    \"cad\": [\"no\",\"no\"],\r\n    \"appet\": [\"good\",\"poor\"],\r\n    \"pe\": [\"no\",\"yes\"],\r\n    \"ane\": [\"no\",\"yes\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ckdmodel.herokuapp.com/predictlr",
+					"protocol": "https",
+					"host": [
+						"ckdmodel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"predictlr"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
